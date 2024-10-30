@@ -32,7 +32,7 @@
 };
 
 &caps_word {
-	continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>
+	continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>;
 };
 
 / {
