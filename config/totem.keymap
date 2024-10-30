@@ -21,7 +21,7 @@
 &mt {
     tapping-term-ms = <170>;
     quick-tap-ms = <100>;
-    global-quick-tap;
+    require-prior-idle-ms;
     flavor = "tap-preferred";
 };
 
@@ -39,12 +39,12 @@
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            display-name = "HOMEROW_MODS";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
-            global-quick-tap;
+            require-prior-idle-ms;
             bindings = <&kp>, <&kp>;
         };
     };
