@@ -16,7 +16,6 @@
 #define Base        0
 #define Num         1
 #define Sym         2
-#define Fun         3
 
 &mt {
     tapping-term-ms = <170>;
@@ -60,7 +59,7 @@
               &kp Q       &kp W       &kp E          &kp R       &kp T      &kp Y     &kp U        &kp I        &kp O       &kp P
               &hm LGUI A  &hm LALT S  &hm LSHFT D    &hm LCTRL F &kp G      &kp H     &hm RCTRL J  &hm RSHFT K  &hm LALT L  &hm RGUI SEMI
 &mt LCTRL ESC &kp Z       &kp X       &kp C          &kp V       &kp B      &kp N     &kp M        &kp COMMA    &kp DOT     &kp FSLH      &kp APOSTROPHE
-                                      &trans     &lt 1 RET   &kp TAB    &kp BSPC  &lt 2 SPACE   &kp DEL
+                                      &caps_word     &lt 1 RET   &kp TAB    &kp BSPC  &lt 2 SPACE  &kp DEL
             >;
         };
 
@@ -69,7 +68,7 @@
             bindings = <
               &kp TILDE   &kp BSPC    &kp UP     &kp DEL    &trans        &kp EQUAL        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
               &trans      &kp LEFT    &kp DOWN   &kp RIGHT  &trans        &kp KP_MULTIPLY  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LEFT_ALT  &kp         &kp MINUS   &trans     &kp PLUS   &trans        &trans           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH  &trans
+&kp LEFT_ALT  &trans      &kp MINUS   &trans     &kp PLUS   &trans        &trans           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH  &trans
                                       &trans     &trans     &trans        &trans           &kp DOT       &kp NUMBER_0
             >;
         };
@@ -81,16 +80,6 @@
               &kp CARET   &kp AMPS &kp STAR  &kp BSLH    &kp PIPE       &kp LEFT &kp DOWN   &kp UP    &kp RIGHT    &trans
 &kp GRAVE     &trans      &trans   &trans    &trans      &trans         &kp HOME &kp PG_DN  &kp PG_UP &kp END   &trans  &trans
                                    &trans    &trans      &trans         &trans   &trans     &trans
-            >;
-        };
-
-        Fun {
-            display-name = "Fun";
-            bindings = <
-        &bootloader  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp END  &kp F1
-        &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F10
-&trans  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F20  &kp F7
-                             &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
