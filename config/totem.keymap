@@ -16,6 +16,7 @@
 #define Base        0
 #define Num         1
 #define Sym         2
+#define Fun         3
 
 &mt {
     tapping-term-ms = <170>;
@@ -59,10 +60,9 @@
               &kp Q       &kp W       &kp E          &kp R       &kp T      &kp Y     &kp U        &kp I        &kp O       &kp P
               &hm LGUI A  &hm LALT S  &hm LSHFT D    &hm LCTRL F &kp G      &kp H     &hm RCTRL J  &hm RSHFT K  &hm LALT L  &hm RGUI SEMI
 &mt LCTRL ESC &kp Z       &kp X       &kp C          &kp V       &kp B      &kp N     &kp M        &kp COMMA    &kp DOT     &kp FSLH      &kp APOSTROPHE
-                                      &caps_word     &lt 1 RET   &kp TAB    &kp BSPC  &lt 2 SPACE  &kp DEL
+                                      &caps_word     &lt 1 RET   &lt 3 TAB  &kp BSPC  &lt 2 SPACE  &kp DEL
             >;
         };
-
         Num {
             display-name = "Num";
             bindings = <
@@ -72,14 +72,22 @@
                                       &trans     &trans     &trans        &trans           &kp DOT       &kp NUMBER_0
             >;
         };
-
         Sym {
             display-name = "Sym";
             bindings = <
-              &kp EXCL    &kp AT   &kp HASH  &kp DOLLAR  &kp PERCENT    &trans   &kp LBKT   &kp RBKT  &kp LPAR  &kp RPAR
-              &kp CARET   &kp AMPS &kp STAR  &kp BSLH    &kp PIPE       &kp LEFT &kp DOWN   &kp UP    &kp RIGHT    &trans
-&kp GRAVE     &trans      &trans   &trans    &trans      &trans         &kp HOME &kp PG_DN  &kp PG_UP &kp END   &trans  &trans
-                                   &trans    &trans      &trans         &trans   &trans     &trans
+              &kp EXCL    &kp AT    &kp HASH  &kp DOLLAR     &kp PERCENT    &trans   &kp LBKT   &kp RBKT  &kp LPAR  &kp RPAR
+              &kp CARET   &kp AMPS  &kp STAR  &kp BSLH       &kp PIPE       &kp LEFT &kp DOWN   &kp UP    &kp RIGHT &kp UNDERSCORE
+&kp GRAVE     &trans      &kp TILDE &kp GRAVE &kp APOSTROPHE &trans         &kp HOME &kp PG_DN  &kp PG_UP &kp END   &trans  &trans
+                                    &trans    &trans         &trans         &trans   &trans     &trans
+            >;
+        };
+        Fun {
+            display-name = "Sym";
+            bindings = <
+              &kp F1    &kp F2   &kp F3    &kp F4    &trans         &kp C_PREV &kp C_PP     &trans       &kp C_NEXT &kp C_PP
+              &kp F5    &kp F6   &kp F7    &kp F8    &trans         &kp C_RW   &kp C_VOL_DN &kp C_VOL_UP &kp C_FF   &trans
+    &trans    &kp F9    &kp F10  &kp F11   &kp F12   &trans         &trans     &kp C_MUTE   &trans       &trans     &trans  &trans
+                                 &trans    &trans    &trans         &trans     &kp C_BRI_DN &kp C_BRI_UP
             >;
         };
     };
