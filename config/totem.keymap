@@ -52,7 +52,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <150>;
             bindings = <&kp ESC>, <&caps_word>;
-        }
+        };
     };
 
     combos { compatible = "zmk,combos"; };
